@@ -1,0 +1,752 @@
+/* variables */
+
+
+// colors
+$dark-green: #2c9047;
+$light-green: #709e42;
+$yellow: #f9d500;
+$main-gray: #444445;
+
+
+// fonts
+@font-face {
+    font-family: LeagueSpartan;
+    src: url(../fonts/league-spartan.otf);
+}
+
+$ptbold: 'PT Serif', serif;
+$opensans: 'Open Sans', sans-serif;
+$league-spartan: 'LeagueSpartan' sans-serif;
+
+// margin / padding
+$section-padding: 40px;
+$center-content: 0 auto;
+$full-width: 100%;
+$content-width: 70%;
+
+
+/* end variables */
+
+
+body {
+  background: white;
+  margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *before, *after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+	width: 100%;
+	margin: auto;
+}
+
+#greenbar {
+  width: 100%; height: 30px;
+  border-style: solid;
+  border-color: $dark-green;
+  background-color: $dark-green;
+}
+
+header {
+
+}
+
+#logo {
+  text-align: center;
+
+img {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+nav ul {
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+
+    li {
+        list-style-type: none;
+        display: block;
+        text-align: center;
+        padding-top: 5%;
+        font-size: 1.5rem;
+        font-family: $ptbold;
+
+    a {
+        text-decoration: none;
+        color: $dark-green;
+
+    &:hover {
+        background-color: yellow;
+        }
+      }
+    }
+}
+#banner {
+  background-color: yellow;
+  padding: $section-padding;
+  background-image: url("../img/banner-01.png");
+  display: block;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+
+}
+
+#headline {
+}
+
+.stretchLeft{
+	animation-name: stretchLeft;
+	-webkit-animation-name: stretchLeft;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 100% 0%;
+	-ms-transform-origin: 100% 0%;
+	-webkit-transform-origin: 100% 0%;
+}
+
+@keyframes stretchLeft {
+	0% {
+		transform: scaleX(0.3);
+	}
+	40% {
+		transform: scaleX(1.02);
+	}
+	60% {
+		transform: scaleX(0.98);
+	}
+	80% {
+		transform: scaleX(1.01);
+	}
+	100% {
+		transform: scaleX(0.98);
+	}
+	80% {
+		transform: scaleX(1.01);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+
+@-webkit-keyframes stretchLeft {
+	0% {
+		-webkit-transform: scaleX(0.3);
+	}
+	40% {
+		-webkit-transform: scaleX(1.02);
+	}
+	60% {
+		-webkit-transform: scaleX(0.98);
+	}
+	80% {
+		-webkit-transform: scaleX(1.01);
+	}
+	100% {
+		-webkit-transform: scaleX(0.98);
+	}
+	80% {
+		-webkit-transform: scaleX(1.01);
+	}
+	100% {
+		-webkit-transform: scaleX(1);
+	}
+}
+
+#bannercontent p {
+  font-family: LeagueSpartan;
+  text-align: right;
+  color: white;
+  font-size: 3em;
+  background-color: $light-green;
+  padding: 20px;
+  line-height: 100%;
+}
+
+p {
+  font-family: $opensans;
+  color: $main-gray;
+}
+
+main {
+  background-color: white;
+  padding: $section-padding;
+  text-align: center;
+}
+
+#maincontent {
+  margin: 0 auto;
+  width: 90%;
+
+}
+
+#about {
+  background-color: white;
+  padding: $section-padding;
+  text-align: center;
+
+  img {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+#aboutcontent {
+  margin: 0 auto;
+  width: 90%;
+
+}
+
+#staff {
+  background-color: green;
+  padding: $section-padding;
+  text-align: center;
+  background-image: url("../img/bg-texture.png");
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $dark-green;
+}
+
+#staffcontent {
+  margin: $center-content;
+  width: $content-width;
+}
+
+h1, h2 {
+  color: $dark-green;
+  font-family: $ptbold;
+}
+
+article {
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+article figure {
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  width: 200px;
+  margin: 1vw;
+}
+
+article figcaption {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: $opensans;
+  color: $main-gray;
+
+}
+
+.names {
+  font-family: $ptbold;
+  font-weight: bold;
+  color: $light-green;
+}
+
+
+article figure img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid $dark-green;
+}
+
+@media screen and (max-width: 400px) {
+  article figure { margin: 50px; }
+  article figcaption { padding-top: 20px; }
+  article { padding: 0; }
+
+}
+
+
+
+.slideDown{
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;
+
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+
+	visibility: visible !important;
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+	}
+	50%{
+		-webkit-transform: translateY(8%);
+	}
+	65%{
+		-webkit-transform: translateY(-4%);
+	}
+	80%{
+		-webkit-transform: translateY(4%);
+	}
+	95%{
+		-webkit-transform: translateY(-2%);
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+	}
+}
+
+
+#new {
+  background-color: green;
+  padding: $section-padding;
+  text-align: center;
+  background-image: url("../img/bg-texture.png");
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $dark-green;
+
+}
+
+#newcontent {
+  margin: $center-content;
+  width: $content-width;
+
+  iframe {
+    margin: auto;
+  }
+}
+
+
+hr {
+  margin-top: 10%;
+}
+
+#subscribe {
+  background-color: white;
+  padding: $section-padding;
+  text-align: center;
+
+h3 {
+    font-size: 1.5em;
+    font-family: $opensans;
+    color: $light-green
+  }
+}
+
+input  {
+  border: 2px solid #2c9047;
+  border-radius: 5px;
+  width: 30%;
+  height: 35px;
+
+}
+
+#contactform {
+  width: 100%;
+  margin: auto;
+  border-top: 1px solid $main-gray;
+}
+
+#contactform h2 {
+  text-align: center;
+  margin-top: 2em;
+}
+
+
+#contactform input[type=text], textarea  {
+  border: 2px solid #2c9047;
+  border-radius: 5px;
+  width: 30%;
+  height: 35px;
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+}
+
+label {
+  margin-left: 35%;
+  font-family: $ptbold;
+  color: $main-gray;
+
+}
+
+.marginlabel {
+  margin-top: 2em;
+  display: block;
+}
+
+input[type=submit] {
+  border: 2px solid #42c938;
+  background-color: $yellow;
+  border-radius: 5px;
+  height: 40px;
+  width: 15%;
+  font-family: $league-spartan;
+  font-size: 14px;
+  color: $dark-green;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+}
+
+input[type=submit]value {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+input[type=submit] value:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.input[type=submit]:hover {
+  border: 2px solid #42c938;
+  background-color: $light-green;
+  color: white;
+}
+input[type=submit]:hover value {
+  padding-right: 10px;
+}
+
+input[type=submit]:hover value:after {
+  opacity: 1;
+  right: 0;
+}
+
+#wrapper {
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+
+#mapcontent {
+  background-color: white;
+}
+
+#map {
+  padding: $section-padding;
+  text-align: center;
+  margin-bottom: 5%;
+
+  h3 {
+    color: $dark-green;
+  }
+}
+
+#contact {
+  background-color: white;
+  padding: $section-padding;
+  text-align: center;
+
+  img {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+#contactcontent {
+  margin: 0 auto;
+  width: 90%;
+
+}
+
+#divider2 {
+  margin-top: -5%;
+  padding-bottom: 10%;
+}
+
+
+#servicescontent h1{
+  text-align: center;
+}
+
+#servicescontent p {
+  padding: 1em;
+}
+
+#servicescontent h3 {
+  display: block;
+}
+
+#pawn {
+  display: inline-block;
+  height: 20em;
+}
+
+#buy p {
+  margin-left: 3.5em;
+}
+
+#trade p {
+  margin-left: 3.5em;
+}
+
+#pawn h3 {
+  margin-left: 3.5em;
+  color: $light-green;
+}
+
+#pawn img {
+    float: left;
+    margin: 1em;
+}
+
+#buy {
+  display: inline-block;
+  height: 20em;
+}
+
+#buy h3 {
+  margin-left: 3.5em;
+  color: $light-green;
+}
+
+#buy img {
+  float: right;
+  margin: 1em;
+}
+
+
+#sell {
+  display: inline-block;
+  height: 20em;
+}
+
+#sell h3 {
+  margin-left: 3.5em;
+  color: $light-green;
+}
+
+#sell img {
+    float: left;
+    margin: 1em;
+}
+
+
+#trade {
+  display: inline-block;
+  height: 20em;
+}
+
+#trade h3 {
+  margin-left: 3.5em;
+  color: $light-green;
+}
+
+#trade img {
+  float: right;
+  margin: 1em;
+}
+
+footer {
+  background-color: $light-green;
+  padding: $section-padding;
+  text-align: center;
+}
+
+#social {
+  ul {
+
+  }
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+
+  }
+
+  img {
+    width: 40%;
+  }
+}
+
+
+#subnav {
+
+  ul {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+
+    li {
+        list-style-type: none;
+        display: block;
+        padding-top: 5%;
+        font-size: 1.5rem;
+        font-family: $ptbold;
+
+    a {
+        text-decoration: none;
+        color: white;
+
+    &:hover {
+        background-color: $dark-green;
+        }
+      }
+    }
+}
+}
+
+@media all and (min-width: 550px) {
+    nav ul {
+        text-align: center;
+
+        li {
+        display: inline;
+        font-size: 1.2rem;
+        padding: 10px;
+        }
+    }
+
+    .p1 {
+        margin: 50px;
+        width: 40%;
+        letter-spacing: 5px;
+    }
+
+    .p2 {
+      margin: 50px;
+      width: 45%;
+      margin-top: -40px;
+      letter-spacing: 5px;
+    }
+
+    .p3 {
+      margin: 50px;
+      width: 35%;
+      margin-top: -40px;
+      letter-spacing: 5px;
+    }
+
+    #subnav {
+      ul {
+        text-align: center;
+
+        li {
+        display: inline;
+        font-size: 1.2rem;
+        padding: 10px;
+
+      a {
+        color: white;
+      }
+      }
+    }
+  }
+
+}
+
+@media all and (min-width: 768px){
+    #logo {
+        text-align: left;
+        img {
+        width: 20%;
+        margin-left: 5%;
+        float: left;
+        }
+    }
+
+    nav {
+        width: 100%;
+        margin-top: -100px;
+        padding-bottom: 2%;
+
+        ul {
+            margin-top: 10%;
+
+        li {
+          display: inline;
+            font-size: 1.5rem;
+            padding: 10px;
+
+        a {
+              color: $dark-green;
+            }
+        }
+      }
+
+        a:hover {
+            background-color: yellow;
+          }
+    }
+
+    #subnav {
+      ul {
+        text-align: center;
+
+        li {
+        display: inline;
+        font-size: 1.2rem;
+        padding: 10px;
+
+      a {
+        color: white;
+      }
+      }
+    }
+  }
+
+}
+
+    .map {
+      float: left;
+      margin-left: 20%;
+    }
