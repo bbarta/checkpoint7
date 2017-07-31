@@ -47,7 +47,7 @@
           <li><a href="/about">ABOUT</a></li>
           <li><a href="/services">SERVICES</a></li>
           <li><a href="/contact">CONTACT</a></li>
-          <li><a href="#">BLOG</a></li>
+          <li><a href="/blog">BLOG</a></li>
       </ul>
     </nav>
 
